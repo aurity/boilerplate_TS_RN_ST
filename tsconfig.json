@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true, // fix for duplicate identifier
+    "lib": [
+      "es2015",
+      "es2017",
+      "dom",
+      "esnext.asynciterable"
+    ],
+    "target": "es2015",
+    "module": "es2015",
+    "jsx": "react",
+    "rootDir": "src",
+    "outDir": "build",
+    "baseUrl": ".",
+    "types": ["jest", "node"],
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    "preserveConstEnums": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "strict": true
+  },
+  "files": [
+    "typings/declarations.d.ts",
+    "typings/react-redux-firebase.d.ts"
+  ],
+  "typeRoots": [
+    "node_modules",
+    "node_modules/redux/index.d.ts",
+    "typings/declarations.d.ts",
+    "typings/react-redux-firebase.d.ts",
+  ],
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "index.js",
+    "webpack",
+    "webpack.config.*",
+    "android",
+    "ios",
+    "build",
+    "node_modules",
+    "typings",
+    "public",
+    "tools",
+    ".coverage",
+    "jest"
+  ],
+  "compileOnSave": false
+}

@@ -1,0 +1,36 @@
+{
+    "verbose": true,
+    "preset": "react-native",
+    "setupTestFrameworkScriptFile": "<rootDir>/jest/unit.setup.js",
+    "transformIgnorePatterns": [
+        "<rootDir>/node_modules/(?!react-native)"
+    ],
+    "moduleFileExtensions": [
+        "ts",
+        "tsx",
+        "js"
+    ],
+    "transform": {
+        "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
+        "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+        ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    },
+    "moduleDirectories": ["node_modules"],
+    "testRegex": "build/.+\\.(test|spec).(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+        "\\.snap$",
+        "./e2e"
+    ],
+    "cacheDirectory": ".jest/cache",
+    "collectCoverage": true,
+    "coverageDirectory": "./.coverage/",
+    "coverageReporters": [
+        "lcov",
+        "text-summary"
+    ],
+    "collectCoverageFrom": [
+        "build/**/*.js",
+        "!build/**/*.spec.js",
+        "!build/**/*.index.js"
+    ]
+}
